@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+      <div class="outercard">
+        <div class="card" id="mercury-card" onclick="mercuryInfoView()">
+          <img src="media/mercury.png" id="mercury">
+          <h1 id="planet-cardTitle">Mercury</h1>
+          <h3 id="planet-cardOtherText">Planet</h3>
+        </div>
+      </div>
+      <div class="outercard">
+         <div class="card" id="venus-card" onclick="venusInfoView()">
+        <img src="media/venus.png" id="venus">
+        <h1 id="planet-cardTitle">Venus</h1>
+        <h3 id="planet-cardOtherText">Planet</h3>
+      </div></div>
+      <div class="outercard">
+         <div class="card" id="earth-card" onclick="earthInfoView()">
+        <img src="media/earth.png" id="earth">
+        <h1 id="planet-cardTitle">Earth</h1>
+        <h3 id="planet-cardOtherText">Planet</h3>
+      </div></div>
+      <div class="outercard">
+         <div class="card" id="mars-card" onclick="marsInfoView()">
+        <img src="media/mars.png" id="mars">
+        <h1 id="planet-cardTitle">Mars</h1>
+        <h3 id="planet-cardOtherText">Planet</h3>
+      </div></div>
+      <div class="outercard">
+         <div class="card"id="jupiter-card" onclick="jupiterInfoView()">
+        <img src="media/jupiter.png" id="jupiter">
+        <h1 id="planet-cardTitle">Jupiter</h1>
+        <h3 id="planet-cardOtherText">Planet</h3>
+      </div></div>
+      <div class="outercard">
+         <div class="card" id="saturn-card"  onclick="saturnInfoView()">
+        <img src="media/saturn.png" id="saturn">
+        <h1 id="planet-cardTitle">Saturn</h1>
+        <h3 id="planet-cardOtherText">Planet</h3>
+      </div></div>
+      <div class="outercard">
+         <div class="card" id="uranus-card" onclick="uranusInfoView()">
+        <img src="media/uranus.png" id="uranus">
+        <h1 id="planet-cardTitle">Uranus</h1>
+        <h3 id="planet-cardOtherText">Planet</h3>
+      </div></div>
+      <div class="outercard">
+         <div class="card" id="neptune-card" onclick="neptuneInfoView()">
+        <img src="media/neptune.png" id="neptune">
+        <h1 id="planet-cardTitle">Neptune</h1>
+        <h3 id="planet-cardOtherText">Planet</h3>
+      </div></div>
+      <div id="small-button">
+              	<!-- small button(begin) -->
+        <button id="unshowButton" onclick="hidebutton2()">
+            <svg class="svgIcon" viewBox="0 0 384 512">
+    <path
+      d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+    ></path>
+  </svg>
+        </button>
+	<button class="button" id="showButton" onclick="hidebutton1()">
+      
+  <svg class="svgIcon" viewBox="0 0 384 512">
+    <path
+      d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+    ></path>
+  </svg>
+</button>
+        <!-- small button(end) -->
+      </div>
+        <div class="terran-borderContainer" id="terran-borderContainer" ><div class="terran-border">
+          <table>
+            <tr>
+              <td><img src="media/mercury.png" onclick="mercuryInfoView()"></td>
+              <td><img src="media/venus.png" onclick="venusInfoView()"></td>
+              <td><img src="media/earth.png" onclick="earthInfoView()"></td>
+              <td><img src="media/mars.png" onclick="marsInfoView()"></td>
+            </tr>
+            <tr>
+              <td><img src="media/jupiter.png" onclick="jupiterInfoView()"></td>
+              <td><img src="media/saturn.png" onclick="saturnInfoView()"></td>
+              <td><img src="media/uranus.png" onclick="uranusInfoView()"></td>
+              <td><img src="media/neptune.png" onclick="neptuneInfoView()"></td>
+            </tr>
+          </table>
+          
+        </div></div>
+      
+      <div class="planet-info-outer-card" id="mercuryInfo" onclick="hideMercuryInfo()">
+        <div class="planet-info card" >
+          <h1>Mercury</h1>
+          <p>Equatorial Diameter: 4,880 km<br>
+Mass: 3.30×10^23 kg (0.055 Earths)<br>
+Mean Distance from Sun: 57.9 million km (0.39 AU)<br>
+Rotation Period: 59 Earth days<br>
+Solar Orbit Period: 88 Earth days<br>
+Surface Gravity: 3.7 m/s² (0.38 g)<br>
+Surface Temperature: -173 to 427°C<br>
+Fun Facts:<br>
+Mercury has a very thin atmosphere, which is composed mostly of oxygen, sodium, and hydrogen.<br>
+It has the most eccentric (oval-shaped) orbit of all the planets in the solar system.</p>
+        </div>
+      </div>
+      <div class="planet-info-outer-card" id="venusInfo" onclick="hideVenusInfo()">
+        <div class="planet-info card" >
+          <h1>Venus</h1>
+          <p>Equatorial Diameter: 12,104 km<br>
+Mass: 4.87×10^24 kg (0.815 Earths)<br>
+Mean Distance from Sun: 108.2 million km (0.72 AU)<br>
+Rotation Period: 243 Earth days (retrograde rotation)<br>
+Solar Orbit Period: 225 Earth days<br>
+Surface Gravity: 8.87 m/s² (0.9 g)<br>
+Surface Temperature: 471°C (constant)<br>
+Fun Facts:<br>
+Venus rotates backward compared to most planets, meaning the Sun rises in the west and sets in the east.<br>
+Venus is the hottest planet in the solar system due to its thick atmosphere, composed mainly of carbon dioxide, trapping heat.</p>
+        </div>
+      </div>
+      <div class="planet-info-outer-card" id="earthInfo" onclick="hideEarthInfo()">
+        <div class="planet-info card" >
+          <h1>Earth</h1>
+          <p>Equatorial Diameter: 12,742 km<br>
+Mass: 5.97×10^24<br>
+5.97×10^24 kg (1 Earth)<br>
+Mean Distance from Sun: 149.6 million km (1 AU)<br>
+Rotation Period: 24 hours<br>
+Solar Orbit Period: 365.25 Earth days<br>
+Surface Gravity: 9.8 m/s² (1 g)<br>
+Surface Temperature: -88 to 58°C<br>
+Fun Facts:<br>
+Earth is the only known planet to support life, with a perfect balance of water, atmosphere, and climate.<br>
+About 70% of Earth's surface is covered by oceans, the largest surface water area in the solar system..</p>
+        </div>
+      </div>
+      <div class="planet-info-outer-card" id="marsInfo" onclick="hideMarsInfo()">
+        <div class="planet-info card" >
+          <h1>Mars</h1>
+          <p>Equatorial Diameter: 6,779 km<br>
+Mass: 6.42×10^23 kg (0.107 Earths)<br>
+Mean Distance from Sun: 227.9 million km (1.52 AU)<br>
+Rotation Period: 24.6 hours<br>
+Solar Orbit Period: 687 Earth days<br>
+Surface Gravity: 3.71 m/s² (0.38 g)<br>
+Surface Temperature: -125 to 20°C<br>
+Fun Facts:<br>
+Mars has the largest volcano in the solar system, Olympus Mons, which is about 3 times the height of Mount Everest.<br>
+The Martian atmosphere is primarily carbon dioxide, with traces of nitrogen and argon, and it is too thin to support liquid water on its surface for long.</p>
+        </div>
+      </div>
+      <div class="planet-info-outer-card" id="jupiterInfo" onclick="hideJupiterInfo()">
+        <div class="planet-info card" >
+          <h1>Jupiter</h1>
+          <p>Equatorial Diameter: 139,820 km<br>
+Mass: 1.90×10^27 kg (318 Earths)<br>
+Mean Distance from Sun: 778.3 million km (5.2 AU)<br>
+Rotation Period: 9.9 hours<br>
+Solar Orbit Period: 11.86 Earth years<br>
+Surface Gravity: 24.79 m/s² (2.53 g)<br>
+Surface Temperature: -108°C<br>
+Fun Facts:<br>
+Jupiter has the strongest magnetic field of all the planets and is known for its Great Red Spot, a giant storm larger than Earth that has been raging for centuries.<br>
+Jupiter has at least 79 moons, including the four largest (Galilean moons): Io, Europa, Ganymede, and Callisto.</p>
+        </div>
+      </div>
+      <div class="planet-info-outer-card" id="saturnInfo" onclick="hideSaturnInfo()">
+        <div class="planet-info card" >
+          <h1>Saturn</h1>
+          <p>Equatorial Diameter: 116,460 km<br>
+Mass: 5.68×10^26 kg (95.16 Earths)<br>
+Mean Distance from Sun: 1.43 billion km (9.58 AU)<br>
+Rotation Period: 10.7 hours<br>
+Solar Orbit Period: 29.45 Earth years<br>
+Surface Gravity: 10.44 m/s² (1.06 g)<br>
+Surface Temperature: -139°C<br>
+Fun Facts:<br>
+Saturn is famous for its large and complex ring system, made mostly of ice particles, rock, and dust.<br>
+Despite its size, Saturn is the least dense of all the planets and would float in water if a large enough body of water existed.</p>
+        </div>
+      </div>
+      <div class="planet-info-outer-card" id="uranusInfo" onclick="hideUranusInfo()">
+        <div class="planet-info card" >
+          <h1>Uranus</h1>
+          <p>Equatorial Diameter: 50,724 km<br>
+Mass: 8.68×10^25 kg (14.54 Earths)<br>
+Mean Distance from Sun: 2.87 billion km (19.22 AU)<br>
+Rotation Period: 17.2 hours (retrograde rotation)<br>
+Solar Orbit Period: 84 Earth years<br>
+Surface Gravity: 8.69 m/s² (0.89 g)<br>
+Surface Temperature: -195°C<br>
+Fun Facts:<br>
+Uranus rotates on its side, with an axial tilt of about 98°, making its seasons extremely long.<br>
+It has faint rings and at least 27 moons, and is often called an “ice giant” due to its cold atmosphere composed of hydrogen, helium, and methane.</p>
+        </div>
+      </div>
+      <div class="planet-info-outer-card" id="neptuneInfo" onclick="hideNeptuneInfo()">
+        <div class="planet-info card" >
+          <h1>Neptune</h1>
+          <p>Equatorial Diameter: 49,244 km<br>
+Mass: 1.02×10^26 kg (17.15 Earths)<br>
+Mean Distance from Sun: 4.5 billion km (30.07 AU)<br>
+Rotation Period: 16.1 hours<br>
+Solar Orbit Period: 164.79 Earth years<br>
+Surface Gravity: 11.15 m/s² (1.14 g)<br>
+Surface Temperature: -201°C<br>
+Fun Facts:<br>
+Neptune has the fastest winds in the solar system, reaching speeds up to 2,100 km/h.<br>
+It was the first planet discovered through mathematical predictions rather than direct observation.</p>
+        </div>
+      </div>
+      
+      
+        
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>

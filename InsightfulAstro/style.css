@@ -1,0 +1,300 @@
+* {
+  font-family: sans-serif;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+.sun {
+  border-radius: 50%;
+  background-color: yellow;
+  width:  40px;
+  height: 40px;
+  position: absolute;
+  top: calc(50vh - 20px);
+  left: calc(50vw - 20px);
+  box-shadow: 0 0 30px lightyellow;
+}
+
+/*small window(begin)*/
+.outercard {
+  position: absolute;
+  top: 30%;
+  left: 0.5%;
+}
+	.card {
+      display: none;
+      flex-direction: column;
+      padding: 10px;
+      align-items: center;
+      position: relative;
+      
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  background: rgba(0,0,0,0.8);
+  box-shadow: rgba(0, 100, 255, 0.8) 0px 0px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+  transition:0.5s;
+}
+.card:hover{
+ box-shadow: rgb(0, 191, 255) 0px 0px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+ transition: 0.5s;
+}
+.card img{
+  width: 50%;
+  height: auto;
+  position: absolute;
+  top: 0;
+}
+.card h1 {
+  position: absolute;
+  bottom: 10%;
+}
+.card h3 {
+  position: absolute;
+  bottom: 0%;
+}
+#earth {
+  width: 250px;
+}
+#venus {
+  width: 400px;
+  padding-right: 30px;
+}
+#saturn {
+  width: 250px;
+}
+#mercury {
+  width: 200px;
+}
+#mars {
+  width: 150px;
+}
+#jupiter {
+  width: 250px;
+}
+#uranus{
+  width: 150px;
+}
+#neptune {
+  width: 150px;
+}
+.card h1, .card h3 {
+  color: white;
+}
+/*small window(end)*/
+
+/*small button(begin)*/
+#small-button {
+  position: absolute;
+  bottom: 0;
+  left: calc(50vw - 70px);
+  display: flex;
+  justify-content: center;
+  width:140px;
+}
+
+.button {
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(20, 20, 20);
+  border: solid rgba(0,204,255,0.5);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(0, 0, 0);
+  align-items: center;
+}
+
+.button:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.button::before {
+  position: absolute;
+  bottom: -20px;
+  content: "View Objects";
+  color: white;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
+	/*small button(end)*/
+
+#unshowButton{
+  position: absolute;
+  bottom: 300px;
+  transform: rotate(180deg);
+}
+
+#unshowButton {
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(20, 20, 20);
+  border: solid rgba(0,204,255,0.5);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  display: none;
+
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+
+#unshowButton::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: white;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+#unshowButton:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.terran-borderContainer {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: calc(50vw - 275px);
+}
+ .terran-border {
+   opacity: 0.8;
+   
+            position: relative;
+            width: 500px;
+            height: 250px;
+            padding: 20px;
+            background-color: #111; /* Темный фон блока */
+            color: #00ccff;
+            text-align: center;
+            font-family: "Orbitron", sans-serif;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border: 4px solid transparent; /* Прозрачный бордер */
+            border-image: linear-gradient(90deg, #00ccff, #004466, #00ccff) 1;
+            
+            /* Внешнее свечение */
+            box-shadow: 
+                0 0 25px #00ccff, /* Яркое синее свечение */
+                0 0 50px rgba(0, 204, 255, 0.5), /* Более мягкое свечение */
+                inset 0 0 15px rgba(0, 204, 255, 0.5); /* Внутреннее свечение */
+            
+            border-radius: 8px; /* Более округлые углы */
+            overflow: hidden;
+        }
+
+        /* Добавляем псевдоэлементы для дополнительного эффекта */
+/*         .terran-border::before,
+        .terran-border::after {
+            content: 'NASA';
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            border: 2px solid rgba(0, 204, 255, 0.5);
+            top: -10%;
+            left: -10%;
+            transform: rotate(45deg);
+            opacity: 0.7;
+            border-radius: 8px;
+            animation: rotate-border 6s linear infinite;
+        } */
+
+/*         .terran-border::after {
+            border-color: rgba(0, 204, 255, 0.3);
+            animation: rotate-border 10s linear infinite reverse;
+        }
+
+        @keyframes rotate-border {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        } */
+.terran-border table {
+  width: 100%;
+  height: 100%;
+}
+.terran-border table td {
+  width: 25%;
+  height: 50%;
+}
+.terran-border table td img {
+  height: auto;
+  width: 100%;
+}
+
+.planet-info-outer-card {
+  display: none;
+  position: absolute;
+  top: 10vh;
+  right: 0;
+}
+.planet-info {
+  display: flex;
+  width: 40vw;
+  height: 60vh;
+  padding: 0 20px;
+}
+.planet-info h1 {
+  top: 1%;
+}
+.planet-info p {
+  padding-top: 13%;
+  color: white;
+}
